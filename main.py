@@ -14,13 +14,14 @@ from kivy.core.image import Image as CoreImage
 import io
 import base64
 import requests
+from kivymd.toast import toast
 
 url = "http://115.138.164.135:7860/sdapi/v1/txt2img"
 
 
 
 def get_image(prompt):
-
+    toast('Please Wait...')
     image_data = {
     "enable_hr": "false",
     "denoising_strength": 0.7,
@@ -90,7 +91,7 @@ class MainApp(MDApp):
         bt = BoxLayout(orientation ='horizontal')
         self.theme_cls.theme_style = "Light"
         self.theme_cls.primary_palette = "BlueGray"
-        aimg = Image()
+        aimg = Image(allow_stretch = True)
 
         t = MDTextField(text = "masterpiece, best quality, ", multiline = True, hint_text = "Prompt (English Only)")
         btn = MDRaisedButton(text ="Submit", size_hint =(.1, .15), pos_hint ={'center_x': .25, 'center_y': .15}, on_press = lambda x: api(t, aimg), md_bg_color = "blue")
