@@ -16,7 +16,7 @@ import base64
 import requests
 from kivymd.toast import toast
 
-url = "http://115.138.164.135:7860/sdapi/v1/txt2img"
+url = "https://com.kuuhaku.ga/sdapi/v1/txt2img"
 
 
 
