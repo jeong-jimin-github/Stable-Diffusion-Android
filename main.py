@@ -96,7 +96,7 @@ class MainApp(MDApp):
         self.theme_cls.primary_palette = "BlueGray"
         aimg = Image(allow_stretch = True)
 
-        t = MDTextField(text = "masterpiece, best quality, ", multiline = True, hint_text = "Prompt (English Only)")
+        t = MDTextField(text = "", multiline = True, hint_text = "Prompt (English Only)")
         btn = MDRaisedButton(text ="Submit", size_hint =(.1, .15), pos_hint ={'center_x': .25, 'center_y': .15}, on_press = lambda x: api(t, aimg), md_bg_color = "blue")
         btnb = MDRaisedButton(text ="Clear", size_hint =(.1, .15), pos_hint ={'center_x': .75, 'center_y': .15}, on_press = lambda x: clear(t, aimg), md_bg_color = "red")
 
