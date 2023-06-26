@@ -16,7 +16,7 @@ import base64
 import requests
 from kivymd.toast import toast
 
-url = "https://com.kuuhaku.ga/sdapi/v1/txt2img"
+url = "http://115.138.164.135:7860/sdapi/v1/txt2img"
 
 
 
@@ -32,7 +32,7 @@ def get_image(prompt):
     "hr_second_pass_steps": 0,
     "hr_resize_x": 0,
     "hr_resize_y": 0,
-    "prompt": prompt,
+    "prompt": "masterpiece, best quality, " + prompt,
     "seed": -1,
     "subseed": -1,
     "subseed_strength": 0,
