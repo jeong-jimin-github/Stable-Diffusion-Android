@@ -19,7 +19,7 @@ import certifi
 import os
 
 os.environ['SSL_CERT_FILE'] = certifi.where()
-url = "http://115.138.164.135:7860/sdapi/v1/txt2img"
+url = "YOUR API URL"
 
 
 
